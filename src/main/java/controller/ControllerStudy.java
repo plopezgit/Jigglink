@@ -101,32 +101,32 @@ public class ControllerStudy {
 		
 			switch (concept.getEffortEstimationConcept()) {
 				case "S":
+					myTimer = new Timer (300000, listener);
+					myTimer.start();
+					JOptionPane.showMessageDialog(null, concept.getTitleConcept() 
+														+ " check-in study timer started at " 
+														+ formatDateTime
+														+ ".\nEvery 5 minutes will check if you have any "
+														+ "note.\nClick Ok to stop the timer.");
+					myTimer.stop();
+					break;
+				case "M":
 					myTimer = new Timer (600000, listener);
 					myTimer.start();
 					JOptionPane.showMessageDialog(null, concept.getTitleConcept() 
-														+ " check in study timer started at " 
+														+ " check-in study timer started at " 
 														+ formatDateTime
 														+ ".\nEvery 10 minutes will check if you have any "
 														+ "note.\nClick Ok to stop the timer.");
 					myTimer.stop();
 					break;
-				case "M":
-					myTimer = new Timer (1200000, listener);
-					myTimer.start();
-					JOptionPane.showMessageDialog(null, concept.getTitleConcept() 
-														+ " check in study timer started at " 
-														+ formatDateTime
-														+ ".\nEvery 20 minutes will check if you have any "
-														+ "note.\nClick Ok to stop the timer.");
-					myTimer.stop();
-					break;
 				case "L":
-					myTimer = new Timer (2400000, listener);
+					myTimer = new Timer (900000, listener);
 					myTimer.start();
 					JOptionPane.showMessageDialog(null, concept.getTitleConcept() 
-														+ " check in study timer started at " 
+														+ " check-in study timer started at " 
 														+ formatDateTime
-														+ ".\nEvery 40 minutes will check if you have any "
+														+ ".\nEvery 15 minutes will check if you have any "
 														+ "note.\nClick Ok to stop the timer.");
 					myTimer.stop();
 					break;
