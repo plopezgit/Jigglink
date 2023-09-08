@@ -149,7 +149,7 @@ public class ControllerStudy {
 		studyDAO.updateConcept(concept);
 		
 		
-		itinerary.setItinerarypoints(itinerary.getItinerarypoints() +4);
+		itinerary.setItinerarypoints(itinerary.getItinerarypoints() +1);
 		studyDAO.updateItinerary(itinerary);
 		
 		return "redirect:/itinerary/details";
@@ -177,7 +177,7 @@ public class ControllerStudy {
 		Itinerary itinerary = studyDAO.getItinerary(idea.getConcept().getItinerary().getItineraryID());
 		studyDAO.saveIdea(idea);
 		
-		itinerary.setItinerarypoints(itinerary.getItinerarypoints() +4);
+		itinerary.setItinerarypoints(itinerary.getItinerarypoints() +2);
 		studyDAO.updateItinerary(itinerary);
 
 		return "redirect:/itinerary/details";
