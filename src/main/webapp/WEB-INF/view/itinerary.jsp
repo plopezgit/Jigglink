@@ -220,6 +220,10 @@ body {
 				<c:param name="id" value="${temp.idconcept}" />
 				<c:param name="iid" value="${temp.itinerary.itineraryID}" />
 			</c:url>
+			<c:url var="updateWithTimerLink" value="/itinerary/updateConceptThroughTimerForm">
+				<c:param name="id" value="${temp.idconcept}" />
+				<c:param name="iid" value="${temp.itinerary.itineraryID}" />
+			</c:url>
 			<c:url var="storeIdeaLink" value="/itinerary/storeIdeaForm">
 				<c:param name="id" value="${temp.idconcept}" />
 				<c:param name="iid" value="${temp.itinerary.itineraryID}" />
@@ -242,7 +246,9 @@ body {
 								counter:</b> ${temp.checkInCounterConcept}
 						</p>
 						<br /> <a href="${updateLink}"><i class="material-icons"
-							style="font-size: 34px; color: black; fontsize: 14px;">where_to_vote</i></a>
+							style="font-size: 34px; color: black; fontsize: 14px;">edit</i></a>
+							<a href="${updateWithTimerLink}"><i class="material-icons"
+							style="font-size: 34px; color: black; fontsize: 14px;">timer</i></a>
 						<a href="${storeIdeaLink}"><i class="material-icons"
 							style="font-size: 34px; color: black;">lightbulb</i></a> <a
 							href="${deleteLink}"><i class="material-icons"

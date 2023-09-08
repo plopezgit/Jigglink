@@ -75,8 +75,9 @@ public class ControllerStudy {
 		return "redirect:/itinerary/details";
 	}
 	
-	@GetMapping("/updateConceptForm")
-	public String updateConceptForm (@RequestParam("id") int id, @RequestParam("iid") int iid, Model model) {
+	
+	@GetMapping("/updateConceptThroughTimerForm")
+	public String updateConceptThroughTimerForm (@RequestParam("id") int id, @RequestParam("iid") int iid, Model model) {
 	
 	List<Itinerary> tableListItinerary = studyDAO.getItineraries();
 	model.addAttribute("tableListItinerary", tableListItinerary);	
@@ -137,6 +138,21 @@ public class ControllerStudy {
 			Itinerary itinerary = studyDAO.getItinerary(iid);
 			itinerary.addConcept(concept);
 			model.addAttribute("concept", concept);
+				
+		return "updateConceptForm";
+	}
+	
+	
+	@GetMapping("/updateConceptForm")
+	public String updateConceptForm (@RequestParam("id") int id, @RequestParam("iid") int iid, Model model) {
+	
+		List<Itinerary> tableListItinerary = studyDAO.getItineraries();
+		model.addAttribute("tableListItinerary", tableListItinerary);	
+		Concept concept = studyDAO.getConcept(id);
+		
+		Itinerary itinerary = studyDAO.getItinerary(iid);
+		itinerary.addConcept(concept);
+		model.addAttribute("concept", concept);
 				
 		return "updateConceptForm";
 	}
@@ -228,23 +244,23 @@ public class ControllerStudy {
 		Itinerary itinerary = studyDAO.getItinerary(iid);		
 		try {
 
-			if (itinerary.getItinerarypoints() >= 1 && itinerary.getItinerarypoints() <= 10) {
+			if (itinerary.getItinerarypoints() >= 1 && itinerary.getItinerarypoints() <= 40) {
 					
 				studyDAO.putBadge(new Badge("Curious", "Curiosity is associated with all aspects of human development, from which derives the process of learning and desire to acquire knowledge and skill. Be curious, lets check in a concept, create and develop an idea.", "local_library"));
 				
-			} else if (itinerary.getItinerarypoints() > 10 && itinerary.getItinerarypoints() <= 20) {
+			} else if (itinerary.getItinerarypoints() > 40 && itinerary.getItinerarypoints() <= 80) {
 				
 				studyDAO.putBadge(new Badge("Explorer", "Exploration is the process of exploring, an activity which has some expectation of discovery. You are exploring well. Lets store and investigate new concepts.", "explore"));
 				
-			} else if (itinerary.getItinerarypoints() > 20 && itinerary.getItinerarypoints() <= 30) {
+			} else if (itinerary.getItinerarypoints() > 80 && itinerary.getItinerarypoints() <= 120) {
 				
 				studyDAO.putBadge(new Badge("Discoverer", "A discovery may sometimes be based on earlier discoveries, collaborations, or ideas during exploration. Some discoveries represent a radical breakthrough in knowledge or technology. You got a discovery. Keep the pase and focus on implementing your ideas.", "online_prediction"));
 				
-			} else if (itinerary.getItinerarypoints() > 30 && itinerary.getItinerarypoints() <= 50) {
+			} else if (itinerary.getItinerarypoints() > 120 && itinerary.getItinerarypoints() <= 160) {
 				
 				studyDAO.putBadge(new Badge("Especialist", "Devoted to a particular itinerary of Concepts and Ideas. You are becoming an specialist on the itinerary. Lets also store and investigate a new concept.", "grade"));
 
-			} else if (itinerary.getItinerarypoints() > 50) {
+			} else if (itinerary.getItinerarypoints() > 160) {
 				
 				studyDAO.putBadge(new Badge("Feynman's drop of water", "Ideas and concepts are jiggling.", "water_drop"));
 
