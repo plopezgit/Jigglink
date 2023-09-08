@@ -45,8 +45,8 @@ tr:hover {
 
 	<form:form action="updateIdea" modelAttribute="idea" method="POST">
 		<table>
-			<form:input path="ideaID" />
-			<form:input path="concept.idconcept" />
+			<form:hidden path="ideaID" />
+			<form:hidden path="concept.idconcept" />
 			<tr>
 				<td>Idea:</td>
 				<td><form:textarea rows="6" cols="50" path="titleIdea" /></td>
