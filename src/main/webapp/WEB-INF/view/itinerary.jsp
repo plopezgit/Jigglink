@@ -8,7 +8,7 @@
 <link rel="stylesheet"
 	href="https://fonts.googleapis.com/icon?family=Material+Icons">
 <meta charset="UTF-8">
-<title>Studyable</title>
+<title>Jiggilink</title>
 <style type="text/css">
 body {
 	font-family: Arial;
@@ -191,7 +191,6 @@ body {
 }
 </style>
 </head>
-<body>
 	<c:forEach var="temp" items="${tableListItinerary}">
 		<c:url var="storeConceptLink" value="/itinerary/storeConceptForm">
 			<c:param name="iid" value="${temp.itineraryID}" />
