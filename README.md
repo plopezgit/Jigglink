@@ -25,7 +25,7 @@
 
 ##### APIs 
 
-[APIs repository](https://github.com/plopezgit/studyable-API)
+[APIs repository](https://github.com/plopezgit/Jigglink-API)
 
 
 ##### Installation 
