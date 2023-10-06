@@ -14,7 +14,7 @@
 
 - Create and size a concept
 - Update a concept
-- Starts concept timer
+- Start/Stop concept timer
 - Create a concept Idea
 
 ###### v0.2
@@ -33,11 +33,19 @@
 Comming soon.
 
 
+##### Demo 
+
+###### v0.2
+
+![Jiggilink](home_v0.2.gif "Jiggilink")
+
+
 ### Future steps
 
 - Login/Sigup module
 - Itinerary setup
 - Itinerary switch
-- Achivemntes logig rules improvements
+- Achivements logic rules improvements
 - Sharing opition
+- Look and feel
 
