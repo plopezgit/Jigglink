@@ -23,15 +23,12 @@ public class Connect extends HttpServlet {
      */
     public Connect() {
         super();
-        // TODO Auto-generated constructor stub
     }
 
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		//response.getWriter().append("Served at: ").append(request.getContextPath());
 		String jdbcURL = "jdbc:mysql://localhost:3306/study?useSSL=false";
 		String jdbUser = "root";
 		String jdbcPass = "";
@@ -40,7 +37,6 @@ public class Connect extends HttpServlet {
 		try {
 			PrintWriter out = response.getWriter();
 			out.print("Nombre de la BBDD: " + jdbcURL);
-			//Class.forName(driver);
 			Connection connectionStudydb = DriverManager.getConnection(jdbcURL, jdbUser, jdbcPass);
 			out.print("Conectado!");
 			connectionStudydb.close();
@@ -53,7 +49,6 @@ public class Connect extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
 		doGet(request, response);
 	}
 
