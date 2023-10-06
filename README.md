@@ -10,14 +10,14 @@
 
 ##### Features
 
-###### v1.0
+###### v0.1
 
 - Create and size a concept
 - Update a concept
 - Starts concept timer
 - Create a concept Idea
 
-v1.1
+###### v0.2
 
 - Accumulate concept itinerary points
 - Reedem badges based on point rules accumulation
