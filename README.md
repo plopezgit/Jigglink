@@ -3,7 +3,7 @@
 
 ![Jiggilink](logo.png "Jiggilink")
 
-[![CodeFactor](https://www.codefactor.io/repository/github/plopezgit/jigglink/badge)](https://www.codefactor.io/repository/github/plopezgit/jigglink)
+[![CodeFactor](https://www.codefactor.io/repository/github/plopezgit/jigglink/badge)](https://www.codefactor.io/repository/github/plopezgit/jigglink) [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=plopezgit_Jigglink&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=plopezgit_Jigglink)
 
 ##### Brief
 **Jigglink** is a simple note application MVP that facilitates and speeds up our concept learning process inspired by [Feynman's deep understanding technique](https://fs.blog/feynman-technique/), and the [Scrum timeboxes events dynamic](https://www.scrum.org/forum/scrum-forum/7242/time-boxed-events).
