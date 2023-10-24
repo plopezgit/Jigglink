@@ -44,19 +44,19 @@ Comming soon.
 ### Roadmap (future steps)
 
 ###### v0.3
-- Login/Signup module
-- Itinerary setup
+- Login/Signup module.
+- Itinerary setup.
 
 ###### v0.4
-- Itinerary switch
+- Itinerary switch.
 
 ###### v0.5
-- Achivements logic rules improvements
+- Achivements logic rules improvements.
 
 ###### v0.6
-- Sharing opition
-- Timer ux improvements
+- Sharing opition.
+- Timer ux improvements.
 
 ###### v1.0
-- Look and feel
+- Look and feel.
 
